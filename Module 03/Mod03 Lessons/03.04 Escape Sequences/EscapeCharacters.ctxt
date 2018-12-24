@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=EscapeCharacters
+comment0.text=\n\ The\ purpose\ of\ this\ program\ is\ to\ demonstrate\ the\ use\ \n\ of\ escape\ sequences\ when\ printing\ literal\ constants.\n\ \n\ Read\ the\ instructions\ in\ the\ comments\ for\ each\ block\ \n\ of\ code\ below\ so\ that\ you\ can\ experiment\ on\ your\ own.\n\ \n\ @author\ Jing\ Cao\n\ @version\ 11/18/\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+numComments=2

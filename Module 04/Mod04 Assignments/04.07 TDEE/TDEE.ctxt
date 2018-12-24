@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=TDEE
+comment0.text=\n\ Purpose\:\ Create\ a\ program\ that\ calulates\ the\ total\ daily\ energy\ expenditure.\n\n\ @author\ Jing\ Cao\n\ @version\ 12/02/18\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+numComments=2

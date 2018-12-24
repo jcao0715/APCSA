@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=GradesV3
+comment0.text=\n\ Purpose\:\ Create\ a\ program\ to\ calculate\ grades\ and\ averages\ using\ the\ Scanner\ method.\n\n\ @author\ Jing\ Cao\ \n\ @version\ 11/21/18\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+numComments=2

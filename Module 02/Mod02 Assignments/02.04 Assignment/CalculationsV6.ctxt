@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=CalculationsV6
+comment0.text=\n\ Purpose\:\ Replace\ all\ integer\ values\ with\ integer\ and\ double\ variables.\n\n\ @author\ Jing\ Cao\n\ @version\ September\ 22,\ 2018\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+numComments=2

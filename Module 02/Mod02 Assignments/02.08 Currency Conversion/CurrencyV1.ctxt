@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=CurrencyV1
+comment0.text=\n\ Purpose\:\ To\ convert\ an\ amount\ of\ money\ from\ a\ specific\n\ country\ into\ the\ equivalent\ currency\ of\ another\ country\ given\ \n\ the\ current\ exchange\ rate.\n\n\ @author\ Jing\ Cao\n\ @version\ 10/21/18\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+numComments=2

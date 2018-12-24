@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=CountingWithWhileLoops
+comment0.text=\n\ The\ purpose\ of\ this\ program\ is\ to\ illustrate\ the\ use\ of\ the\n\ while\ loop\ as\ a\ counter.\n\n\ @author\ Jing\ Cao\ \n\ @version\ 12/10/18\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+numComments=2

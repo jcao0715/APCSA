@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=Artwork
+comment0.text=\n\ Purpose\:\ To\ use\ strings\ and\ escape\ sequences\ to\ create\ art.\n\n\ @author\ Jing\ Cao\n\ @version\ 11/19/18\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+numComments=2

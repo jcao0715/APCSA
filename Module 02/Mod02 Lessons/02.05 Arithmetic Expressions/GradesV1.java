@@ -1,0 +1,22 @@
+/**
+ * Purpose: Calculate the average of four grades
+ * 
+ * @author Jing Cao
+ * @version 09/23/18
+ */
+
+public class GradesV1
+{
+    public static void main(String[ ] args)
+    {
+        int test1 = 96;         //test score 1
+        int test2 = 78;         //test score 2
+        int test3 = 85;         //test score 3
+        int test4 = 87;         //test score 4
+        double average;         //average of four test scores
+        
+        //calculate the average grade and print the results
+        average = (test1 + test2 + test3 + test4) / 4.0;
+        System.out.println("Average Score: " + average);            
+    }//end of main method
+}//end of class
