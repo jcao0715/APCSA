@@ -38,9 +38,11 @@ import java.util.*;
  			length = in.nextInt();
  			while(length <= 6)
  			{
- 				System.out.println("Password length too short. Pease try again.");
+ 				System.out.println("Password length too short. Please try again.");
  				System.out.println("Password length (more than 6 characters: ");
  				length = in.nextInt();
  			}
+
+ 			
  		}
  }

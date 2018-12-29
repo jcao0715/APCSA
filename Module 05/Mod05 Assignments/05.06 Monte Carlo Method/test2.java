@@ -57,9 +57,6 @@ public class test2
 					foxSquirrel ++;
 					squirrelsSeen ++;
 				}
-				
-				System.out.println("squirrelsSeen: " + squirrelsSeen);
-				System.out.println("foxSquirrel: " + foxSquirrel);
 
 			}
 
