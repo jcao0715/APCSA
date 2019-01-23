@@ -4,29 +4,6 @@
  * @author Jing Cao
  * @version 1/1/19
  */
-// import java.util.*;
-
-// public class HurricaneSelector
-// {
-// 	public static void main(String[] args) throws IOException
-// 	{
-// 		//Declare variables
-// 		Scanner in = new Scanner(System.in);
-// 		Scanner inFile = new Scanner(new File("HurricanData.txt"));
-// 		int arrayLength = 0;
-
-// 		String[] name;
-// 		name = new String[arrayLength];
-// 		String[] month;
-// 		month = new String[arrayLength];
-// 		int[] year;
-// 		year = new int[arrayLength];
-// 		int[] pressure;
-// 		pressure = new int[arrayLength];
-// 		int[] windSpeedKnots;
-// 		windSpeedKnots = new int[arrayLength];
-// 	}
-// }
 
 import java.util.Scanner;
 import java.io.File;
