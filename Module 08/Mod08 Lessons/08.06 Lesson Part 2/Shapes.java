@@ -1,11 +1,4 @@
 
-/**
- * The Shapes class calculates the area and the
- * hypotenuse of a triangle.
- *
- * @author Alan Kay
- * @version 06/08/17
- */
 public class Shapes
 {
     private int myBase;
