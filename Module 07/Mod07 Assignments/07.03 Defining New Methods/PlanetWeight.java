@@ -1,55 +1,56 @@
-/**
- * Write a program that calculates your weight on each planet in the solar system.
- * @author Jing Cao
- * @version 01/15/19
- */
+import java.util.*;
+import java.io.*;
 
-import java.util.Scanner;
-import java.io.File;
-import java.io.IOException;
-
-public class PlanetWeight {
-
-    public static double [] gravity()throws IOException {
-		int iterate = 0;
+public class PlanetWeight
+{
+	public static double[] gravity() throws IOException
+	{
+		int i = 0;
 		double[] gravities = new double[8];
-		File fileName = new File("gravity.txt");
-		Scanner inFile = new Scanner(fileName);
-		while (inFile.hasNext()){
-			gravities[iterate] = inFile.nextDouble();
-			iterate++;
+		Scanner inFile = new Scanner(new File("gravity.txt"));
+
+		while(inFile.hasNext())
+		{
+			gravities[i] = inFile.nextDouble();
+			i++;
 		}
+
 		inFile.close();
 		return gravities;
-    }
+	}
 
-    // Convert pounds to kilograms
-    static double kiloPerPound = 2.2046;
-    static int pound = 150;
-    static double kilograms = pound / kiloPerPound;
+	public static double[] pounds(double[] gravities, double[] weight)
+	{
+		double kgPerLbs = 2.2046;
+		int lbs = 150;
+		double kg = lbs / kgPerLbs;
 
-    public static double[] pounds(double[]gravities, double[]weight) {
-		for (int iterate = 0; iterate < 8; iterate++){
-			weight[iterate] = kilograms * gravities[iterate];
+		for(int i = 0; i < 8; i++)
+		{
+			weight[i] = kg + gravities[i];
 		}
+
 		return weight;
-    }
+	}
 
-    public static void print(double[] gravities, double[] weight, String[] planetNames) {
-	    System.out.printf("%21s\n","My Weight on the Planets");
-	    System.out.println("Planet	Gravity	 Weight(lbs)");
-	    System.out.println("----------------------------");
-	    for (int iterate = 0; iterate < 8; iterate ++){
-	        System.out.printf(planetNames[iterate] + "	 %4.1f	%4.1f",gravities[iterate],weight[iterate]);	        System.out.println();
-	    }
-    }
+	public static void print(double[] gravities, double[] weight, String[] planets)
+	{
+		System.out.printf("%20s\n", "My Weight on the Planets");
+		System.out.println("Planet          Gravity          Weight (lbs)");
+		System.out.println("---------------------------------------------");
 
-    public static void main(String[] args) throws IOException {
-        String [] planet = {"Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"};
-	    double gravities[] = gravity();
-	    double[] weight = new double[8];
-	    weight = pounds(gravities, weight);
-	    print(gravities, weight, planet);
-    }
+		for(int i = 0; i < 8; i++)
+		{
+			System.out.printf("%-10s %10.1f %18.1f\n", planet[i], gravities[i], weight[i]);
+		}
+	}
 
+	public static void main(String[] args) throws IOException
+	{
+		String[] planets = {"Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"};
+		double gravities[] = gravity();
+		double[] weight = new double[8];
+		weight = pounds(gravities, weight);
+		print(gravities, weight, planets);
+	}
 }
