@@ -1,6 +1,6 @@
 PROJECT TITLE: EstimatePi.java
 PURPOSE OF PROJECT: Write a program to calculate the value of pi by simulating throwing darts at a dart board.
-VERSION or DATE: 01/22/19
+VERSION or DATE: 05/25/19
 AUTHORS: Jing Cao
 
 ******************************** P M R ***************************************
