@@ -9,7 +9,7 @@ public class Darts
 {
 	private int myDartThrows;
 	private int myNumTrials;
-	private int numHits;
+	private double average = 0;
 
 	public Darts(int dartThrows, int numTrials)
 	{
@@ -17,30 +17,41 @@ public class Darts
 		myNumTrials = numTrials;
 	}
 
-	public int hits(int numTrials)
+	public double calcPi(int numTrials, int dartThrows)
 	{
-		double x;
-		double y;
+		double x, y;
+		int numHits = 0;
 
-		for(int i = 0; i < numTrials; i++)
+		for(int i = 0; i < dartThrows; i++)
 		{
 			x = Math.random();
 			y = Math.random();
 
 			if(Math.pow(x, 2) + Math.pow(y, 2) <= Math.pow(1.0, 2))
 			{
-				numHits++; 
+				numHits++;
 			}
 		}
 
-		return numHits;
-	}
-
-	public double calcPi(double numHits, double dartThrows)
-	{
-		double pi = (4 * ((double)numHits) / dartThrows);
+		double pi = 4 * (double)numHits / dartThrows;
 
 		return pi;
+
+	}
+
+	public double calcAvg()
+	{
+		double total = 0;
+
+		for(int i = 0; i < myNumTrials; i++)
+		{
+			double approxPi = calcPi(myNumTrials, myDartThrows);
+			total += approxPi;
+		}
+
+		average = total / myNumTrials;
+
+		return average;
 	}
 
 	public int getNumTrials()
@@ -53,24 +64,13 @@ public class Darts
 		return myDartThrows;
 	}
 
-	public int getNumHits()
+	public double getAvg()
 	{
-		return numHits;
+		return average;
 	}
 
 	public String toString()
 	{
-		double total = 0;
-
-		for(int i = 0; i < myNumTrials; i++)
-		{
-			int hits = hits(myDartThrows);
-			double approxPi = calcPi(hits, myDartThrows);
-			total += approxPi;
-		}
-
-		double average = (total / myNumTrials);
-
 		return "Estimate of Pi: " + average;
 	}
 }
