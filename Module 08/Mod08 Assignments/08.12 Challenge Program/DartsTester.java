@@ -9,6 +9,8 @@ public class DartsTester
 {
 	public static void main(String [] args)
 	{
-		
+		Darts obj1 = new Darts(1500, 10);
+
+		System.out.println(obj1.hits(obj1.getNumTrials()));
 	}
 }
