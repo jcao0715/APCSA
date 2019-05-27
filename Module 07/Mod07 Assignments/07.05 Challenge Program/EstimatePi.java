@@ -15,7 +15,7 @@ public class EstimatePi
     
     public static int hits (double x, double y, int numTrials)
     {
-        for(int n = 1; n < numTrials; n++)
+        for(int n = 0; n < numTrials; n++)
         {
             x = Math.random();
             y = Math.random();
