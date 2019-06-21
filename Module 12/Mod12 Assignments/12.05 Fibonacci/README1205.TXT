@@ -1,6 +1,6 @@
 PROJECT TITLE: Fibonacci.java
 PURPOSE OF PROJECT: Create a java program that calculates the Fibonacci sequence.
-VERSION or DATE: 4/21/19
+VERSION or DATE: 06/20/19
 AUTHORS: Jing Cao
 
 **************************************** P M R ************************************

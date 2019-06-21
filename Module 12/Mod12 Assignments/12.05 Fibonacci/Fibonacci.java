@@ -2,7 +2,7 @@
  * Purpose: Use a recursive method to print the Fibonacci sequence.
  *
  * @author Jing Cao
- * @version 04/21/19
+ * @version 06/20/19
  */
 
 import java.util.Scanner;
