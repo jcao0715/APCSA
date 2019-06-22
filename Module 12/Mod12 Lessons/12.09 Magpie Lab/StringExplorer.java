@@ -38,10 +38,11 @@ public class StringExplorer
 
         boolean isEqual = sample.equals(sample.toLowerCase());
         System.out.println("sample.equals(sample.toLowerCase() = "+ isEqual);
+        System.out.println();
 
         // Assign a new value to sample. Use a phrase of your choosing.
         // Pad the beginning and end of the string literal with spaces.
-        sample = "    ";
+        sample = "   Antoinette played the lottery every week for a year.   ";
 
         //  Add examples below for the following methods:
         //    trim()
@@ -50,6 +51,29 @@ public class StringExplorer
         //    substring() with one and two parameters
         //    compareTo()
         //    any other String methods you'd like to try
+        System.out.println("sample = " + sample);
+
+        String trimmed = sample.trim();
+        System.out.println("sample.trim() = " + trimmed);
+
+        int length = sample.length();
+        System.out.println("sample.length() = " + length);
+
+        int index1 = sample.indexOf("t");
+        System.out.println("sample.indexOf(\"t\") = " + index1);
+
+        int index2 = sample.indexOf("t", 10);
+        System.out.println("sample.indexOf(\"t\", 10) = " + index2);
+
+        String substring1 = sample.substring(5, 15);
+        System.out.println("sample.substring(5, 15) = " + substring1);
+
+        String substring2 = sample.substring(15);
+        System.out.println("sample.substring(15) = " + substring2);
+
+        int compare = sample.compareTo("Hello World");
+        System.out.println("sample.compareTo(\"Hello World\") = " + compare);
+
 
     }
 
