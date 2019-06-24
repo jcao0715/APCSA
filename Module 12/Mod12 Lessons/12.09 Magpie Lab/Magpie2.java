@@ -7,8 +7,8 @@
  *
  * Code adapted from work by Laurie White for the College Board.
  *
- * @author (enter your name)
- * @version (enter today's date)
+ * @author Jing Cao
+ * @version 6/24/19
  */
 public class Magpie2
 {
@@ -28,20 +28,58 @@ public class Magpie2
      *            the user statement
      * @return a response based on the rules given
      */
+    
     public String getResponse(String statement)
     {
+
         String response = "";
-        if (statement.indexOf("no") >= 0)
+
+        if(findKeyword(statement, "no") >= 0)
         {
             response = "Why so negative?";
         }
-        else if (statement.indexOf("mother") >= 0
-                || statement.indexOf("father") >= 0
-                || statement.indexOf("sister") >= 0
-                || statement.indexOf("brother") >= 0)
+
+        else if(findKeyword(statement, "mother") >= 0
+                || findKeyword(statement, "father") >= 0
+                || findKeyword(statement, "sister") >= 0
+                || findKeyword(statement, "brother") >= 0)
         {
             response = "Tell me more about your family.";
         }
+
+        else if(findKeyword(statement, "dog") >= 0
+                || findKeyword(statement, "cat") >= 0)
+        {
+            response = "Tell me more about your pets.";
+        }
+
+        else if(findKeyword(statement, "Mr.") >= 0
+                || findKeyword(statement, "Mrs.") >= 0
+                || findKeyword(statement, "Ms.") >= 0)
+        {
+            response = "They sound like a great teacher!";
+        }
+
+        else if(statement.length() == 0)
+        {
+            response = "Say something, please.";
+        }
+
+        else if(findKeyword(statement, "hello") >= 0)
+        {
+            response = "Hello there!";
+        }
+
+        else if(findKeyword(statement, "happy") >= 0)
+        {
+            response = "Wonderful! Tell me more!";
+        }
+
+        else if(findKeyword(statement, "sad") >= 0)
+        {
+            response = "That's too bad. Cheer up.";
+        }
+
         else
         {
             response = getRandomResponse();
@@ -64,17 +102,30 @@ public class Magpie2
         {
             response = "Interesting, tell me more.";
         }
+
         else if (whichResponse == 1)
         {
             response = "Hmmm.";
         }
+
         else if (whichResponse == 2)
         {
             response = "Do you really think so?";
         }
+
         else if (whichResponse == 3)
         {
             response = "You don't say.";
+        }
+
+        else if(whichResponse == 4)
+        {
+            response = "Nice to hear.";
+        }
+
+        else if(whichResponse == 5)
+        {
+            response = "Huh.";
         }
 
         return response;
@@ -102,6 +153,7 @@ public class Magpie2
         String phrase = statement.trim();
         // The only change to incorporate the startPos is in the line below
         int position = phrase.toLowerCase().indexOf(goal.toLowerCase(), startPos);
+        //changes phrase to all lowercase then finds first occurence of goal from the startPos
 
         // Refinement--make sure the goal isn't part of a word
         while (position >= 0)
@@ -112,6 +164,7 @@ public class Magpie2
             {
                 before = phrase.substring(position - 1, position).toLowerCase();
             }
+
             if (position + goal.length() < phrase.length())
             {
                 after = phrase.substring(
