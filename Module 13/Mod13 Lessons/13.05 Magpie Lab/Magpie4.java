@@ -6,8 +6,8 @@
 
  * Code adapted from work by Laurie White for the College Board.
  *
- * @author (enter your name)
- * @version (enter today's date)
+ * @author Jing Cao
+ * @version 6/27/19
  *
  */
 public class Magpie4
@@ -89,7 +89,7 @@ public class Magpie4
         }
         int position = findKeyword (statement, "I want to", 0);
         String restOfStatement = statement.substring(position + 9).trim();
-        return "What would it mean to " + restOfStatement + "?";
+        return "Would you really be happy if you had " + restOfStatement + "?";
     }
 
 
@@ -115,7 +115,7 @@ public class Magpie4
         int positionOfMe = findKeyword (statement, "me", positionOfYou + 3);
 
         String restOfStatement = statement.substring(positionOfYou + 3, positionOfMe).trim();
-        return "What makes you think that I " + restOfStatement + " you?";
+        return "Why do you " + restOfStatement + " me?";
     }
 
     /**
@@ -188,24 +188,14 @@ public class Magpie4
         int whichResponse = (int)(r * NUMBER_OF_RESPONSES);
         String response = "";
 
-        if (whichResponse == 0)
-        {
-            response = "Interesting, tell me more.";
-        }
-        else if (whichResponse == 1)
-        {
-            response = "Hmmm.";
-        }
-        else if (whichResponse == 2)
-        {
-            response = "Do you really think so?";
-        }
-        else if (whichResponse == 3)
-        {
-            response = "You don't say.";
-        }
+        String[] responses = {"Interesting, tell me more.", 
+                                "Hmmm.",
+                                "Do you really think so?",
+                                "You don't say.",
+                                "Huh.",
+                                "Okay."};
 
-        return response;
+        return responses[NUMBER_OF_RESPONSES];
     }
 
 }
