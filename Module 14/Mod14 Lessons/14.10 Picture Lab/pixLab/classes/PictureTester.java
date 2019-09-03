@@ -1,8 +1,8 @@
 /*
- * Purpose:
+ * Purpose: Test pictures in java
  * 
- * < your name >
- * < today's date >
+ * < Jing Cao >
+ * < 9/2/19 >
 */
 
 /**
@@ -66,7 +66,7 @@ public class PictureTester
     // comment out the ones you don't want to run
     
     // Activity 5
-    testZeroBlue();
+    //testZeroBlue();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
@@ -86,9 +86,9 @@ public class PictureTester
     //testMirrorDiagonal();
     
     // Activity 7
-    //testMirrorTemple();
-    //testMirrorArms();
-    //testMirrorGull();
+    // testMirrorTemple();
+    // testMirrorArms();
+    // testMirrorGull();
 
     
     // Activity 8

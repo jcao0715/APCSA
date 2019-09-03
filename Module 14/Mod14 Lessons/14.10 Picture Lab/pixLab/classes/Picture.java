@@ -1,8 +1,8 @@
 /*
- * Purpose:
+ * Purpose: Test pictures in java
  * 
- * < your name >
- * < today's date >
+ * < Jing Cao >
+ * < 9/2/19 >
 */
 
 
@@ -107,10 +107,40 @@ public class Picture extends SimplePicture
     }
   }
   
+  public void zeroRed()
+  {
+    Pixel[][] pixels = this.getPixels2D();
+    for (Pixel[] rowArray : pixels)
+    {
+      for (Pixel pixelObj : rowArray)
+      {
+        pixelObj.setRed(0);
+      }
+    }
+  }
+
+  public void keepOnlyGreen()
+  {
+    zeroBlue();
+    zeroRed();
+  }
   // keepOnlyBlue
   // keepOnlyRed
   // keepOnlyGreen
-  // nagate
+  // negate
+  // public void negate() {
+
+  //   Pixel[][] pixels = this.getPixels2D();
+  //   for (Pixel[] rowArray : pixels)
+  //   {
+  //     for (Pixel pixelObj : rowArray)
+  //     {
+  //       pixelObj.setRed(red - 225);
+  //       pixelObj.setBlue(blue - 225);
+  //       pixelObj.setGreen(green - 225);
+  //     }
+  //   }
+  // }
   // grayscale
   // fixUnderWater - optional
   
@@ -164,6 +194,27 @@ public class Picture extends SimplePicture
   }
   
   // mirrorArms 
+  public void mirrorArms()
+  {
+    int mirrorPoint = 207;
+    Pixel leftPixel = null;
+    Pixel rightPixel = null;
+    int count = 0;
+    Pixel[][] pixels = this.getPixels2D();
+    
+    // loop through the rows
+    for (int row = 155; row < 259; row++)
+    {
+      // loop from 13 to just before the mirror point
+      for (int col = 90; col < mirrorPoint; col++)
+      {
+        
+        leftPixel = pixels[row][col];      
+        rightPixel = pixels[row][mirrorPoint - col + mirrorPoint];
+        rightPixel.setColor(leftPixel.getColor());
+      }
+    }
+  }
   // mirrorGull 
   
   
