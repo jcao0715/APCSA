@@ -22,6 +22,21 @@ public class ElectionTesterV3 {
 		System.out.println("Election results: \n");
 		Table(candidates);
 		System.out.println("Total number of votes cast is election: " + TotalVotes(candidates));
+		System.out.println();
+		System.out.println("<< Changing Florence's name to Flora >>");
+		System.out.println();
+		ChangeName(candidates, "Florence", "Flora");
+		Table(candidates);
+		System.out.println();
+		System.out.println("<< Changing Candy's votes to 20 >>");
+		System.out.println();
+		ChangeVotes(candidates, "Candy", 20);
+		Table(candidates);
+		System.out.println();
+		System.out.println("<< Changing Tom's name to Tim and his votes to 1 >>");
+		System.out.println();
+		ChangeInfo(candidates, "Tom", "Tim", 20);
+		Table(candidates);
 
 	}
 
@@ -52,6 +67,40 @@ public class ElectionTesterV3 {
 		System.out.printf("%-24s%-24s%s%n", "Candidate", "Votes Received", "% of Total Votes");
 		for(Candidate person : array) {
 			System.out.printf("%-24s%-24s%s%n", person.getName(), person.getVotes(), (person.getVotes() / total) * 100); 
+		}
+	}
+
+	public static void ChangeName(Candidate[] array, String find, String replace) {
+
+		for(int i = 0; i < array.length; i++) {
+
+			if(array[i].getName().equals(find)) {
+
+				array[i].setName(replace);
+			}
+		}
+	}
+
+	public static void ChangeVotes(Candidate[] array, String find, int replace) {
+
+		for(int i = 0; i < array.length; i++) {
+
+			if(array[i].getName().equals(find)) {
+
+				array[i].setVotes(replace);
+			}
+		}
+	}
+
+	public static void ChangeInfo(Candidate[] array, String find, String newName, int newVotes) {
+
+		for(int i = 0; i < array.length; i++) {
+
+			if(array[i].getName().equals(find)) {
+
+				array[i].setName(newName);
+				array[i].setVotes(newVotes);
+			}
 		}
 	}
 }
