@@ -2,7 +2,7 @@
  * This class is an abstract class defining homework.
  *
  * @author Jing Cao
- * @version 09/15/19
+ * @version 09/22/19
  */
 
 public class Math3 extends Homework3{ 
