@@ -5,7 +5,7 @@
  * @version 09/22/19
  */
 
-public interface Processing {
+public interface Processing4 {
 
 	public abstract void doHomework();
 
