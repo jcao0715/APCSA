@@ -67,11 +67,11 @@ public class TestListing2
 
             dest[ insertIndex ] = next;
             
-            //Debugging Statements 
-            //uncomment to print the listings after each pass through the sort
-            //System.out.println("\nPass # " + i);
-            //for(HouseListing h : dest)  
-            //    if( h != null) System.out.printf("$%10.2f \n", h.getCost() );
+            Debugging Statements 
+            uncomment to print the listings after each pass through the sort
+            System.out.println("\nPass # " + i);
+            for(HouseListing h : dest)  
+               if( h != null) System.out.printf("$%10.2f \n", h.getCost() );
         } // end of for
     }
     
