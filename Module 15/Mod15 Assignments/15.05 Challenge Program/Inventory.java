@@ -19,6 +19,7 @@ public class Inventory {
 		Truck truck2 = new Truck("Hummer", 75000.00);
 		Tool tool1 = new Tool("Saw", 100.00);
 		Tool tool2 = new Tool("Saw", 20.00);
+		
 		products.add(car1);
 		products.add(car2);
 		products.add(truck1);
@@ -26,4 +27,22 @@ public class Inventory {
 		products.add(tool1);
 		products.add(tool2);
 	}
+
+	public static String takeInventory(String str, ArrayList<Product> x) {
+
+        String product = str;
+        int quantity = 0;
+        double totalCost = 0;
+
+        for(Vehicle prod : p) //checks vehicles
+        {
+            if(product == prod.getName())
+            {
+                quantity++;
+                totalCost += prod.getCost();
+            }
+        }
+
+        return product + ": Quantity = " + quantity + ", Total Cost = " + totalCost;
+    }
 }
