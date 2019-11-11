@@ -7,8 +7,8 @@ import java.util.ArrayList;
  *      initialize, shuffle, deal, and check if empty.
  *
  *
- *  < Your Name >
- *  < Today's Date >
+ *  Jing Cao
+ *  11/10/19
  */
 public class Deck
 {
@@ -76,8 +76,12 @@ public class Deck
     */
    public void shuffle()
    {
-      /* *** TO BE IMPLEMENTED IN ACTIVITY 4 *** */
-      /* For Activity 2, this method will do nothing. */
+      for (int k = cards.size() - 1; k > 0; k--) {
+   int pos = (int) (Math.random() * (k + 1)); 
+   int temp = cards.get(pos);
+   cards.get(pos).set(k);
+   cards.get(k) = temp; // range 0 to k, inclusive
+  }
    }
 
    /**
