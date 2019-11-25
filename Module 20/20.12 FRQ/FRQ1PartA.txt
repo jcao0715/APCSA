@@ -1,0 +1,12 @@
+public int countNotInVocab(String[] wordArray) {
+	
+	int count = 0;
+
+	for(int i = 0; i < wordArray.length; i++) {
+		if(findWord(wordArray[i])) {
+		count++;
+		}
+	}
+
+	return wordArray.length - count;
+}

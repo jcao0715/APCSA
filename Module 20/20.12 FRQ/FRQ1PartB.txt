@@ -1,0 +1,15 @@
+public String[] notInVocab(String[] wordArray) {
+
+	int size = countNotInVocab(wordArray);
+	String notInVocab = new String[size];
+
+	int count = 0;
+	for(int i = 0; i < wordArray.length; i++) {
+		if(findWord(wordArray.length) == false) {
+			notInVocab[count] = wordArray[i];
+			count++;
+		}
+	}
+
+	return notInVocab;
+}
